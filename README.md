@@ -1,4 +1,46 @@
 # Semantic Segmentation
+
+## Project Description
+This project is labeling the pixels of a road in images using a Fully Convolutional Network (FCN).
+
+### Training Dataset
+For network training was used [Kitti Road dataset](http://www.cvlibs.net/datasets/kitti/eval_road.php) from [here](http://www.cvlibs.net/download.php?file=data_road.zip) as suggested.
+
+### Fully Convolutional Network implementation
+
+As requested, all needed function were implemented (`load_vgg`, `layers`, `optimize` and `train_nn`).
+As described in Lesson in `layers` was implemented FCN Encoder with convolutions and Decoder with upsampling to original image size and skip connections.
+
+### Training Network
+FCN was trained using described above Training Dataset with 50 epochs and using batch size = 5.
+The latest output of loss functions:
+```
+Epoch: 50, Batch: 44, Loss: 0.027
+Epoch: 50, Batch: 45, Loss: 0.026
+Epoch: 50, Batch: 46, Loss: 0.022
+Epoch: 50, Batch: 47, Loss: 0.018
+Epoch: 50, Batch: 48, Loss: 0.030
+Epoch: 50, Batch: 49, Loss: 0.023
+Epoch: 50, Batch: 50, Loss: 0.029
+Epoch: 50, Batch: 51, Loss: 0.031
+Epoch: 50, Batch: 52, Loss: 0.029
+Epoch: 50, Batch: 53, Loss: 0.031
+Epoch: 50, Batch: 54, Loss: 0.026
+Epoch: 50, Batch: 55, Loss: 0.028
+Epoch: 50, Batch: 56, Loss: 0.021
+Epoch: 50, Batch: 57, Loss: 0.024
+```
+
+### Results
+The labeling results are quite good (fit to the rubric requirement of at least 80% road surface labeled), here are some pictures:
+![Result1](runs/1517606483.1430795/umm_000040.png)
+![Result2](runs/1517606483.1430795/um_000003.png)
+![Result3](runs/1517606483.1430795/um_000027.png)
+![Result4](runs/1517606483.1430795/um_000032.png)
+
+
+## Project Description from original
+
 ### Introduction
 In this project, you'll label the pixels of a road in images using a Fully Convolutional Network (FCN).
 
